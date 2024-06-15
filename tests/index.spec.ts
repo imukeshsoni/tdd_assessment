@@ -34,6 +34,14 @@ describe('calculateSum', () => {
     it('should return sum of n numbers', () => {
         expect(calculateSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toBe(55);
     });
+
+    it('should throw error for negative numbers', () => {
+        expect(() => calculateSum([-1, -2, -3])).toThrowError('Negatives not allowed: -1, -2, -3');
+    });
+
+    it('should throw error for negative numbers', () => {
+        expect(() => calculateSum([1, -2, -3])).toThrowError('Negatives not allowed: -2, -3');
+    });
 });
 
 describe('splitNumbers', () => {
