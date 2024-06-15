@@ -4,6 +4,6 @@ export default function add(nums: string): number {
     return calculateSum(numbers);
 }
 
-function calculateSum(numbers: number[]): number {
+export function calculateSum(numbers: number[]): number {
     return numbers.reduce((acc, curr) => acc + curr, 0);
 }
