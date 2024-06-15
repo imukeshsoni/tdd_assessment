@@ -36,11 +36,11 @@ describe('calculateSum', () => {
     });
 
     it('should throw error for negative numbers', () => {
-        expect(() => calculateSum([-1, -2, -3])).toThrowError('Negatives not allowed: -1, -2, -3');
+        expect(() => calculateSum([-1, -2, -3])).toThrowError('negative numbers not allowed: -1, -2, -3');
     });
 
     it('should throw error for negative numbers', () => {
-        expect(() => calculateSum([1, -2, -3])).toThrowError('Negatives not allowed: -2, -3');
+        expect(() => calculateSum([1, -2, -3])).toThrowError('negative numbers not allowed: -2, -3');
     });
 });
 

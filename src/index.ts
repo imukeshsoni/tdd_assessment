@@ -6,7 +6,7 @@ export default function add(nums: string): number {
 
 export function calculateSum(numbers: number[]): number {
     if (numbers.some((num) => num < 0)) {
-        throw new Error(`Negatives not allowed: ${numbers.filter((num) => num < 0).join(', ')}`);
+        throw new Error(`negative numbers not allowed: ${numbers.filter((num) => num < 0).join(', ')}`);
     }
     return numbers.reduce((acc, curr) => acc + curr, 0);
 }
