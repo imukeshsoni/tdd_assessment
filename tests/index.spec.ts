@@ -1,7 +1,7 @@
-import  calculator  from '../src/index'
+import calculator  from '../src/index'
 
 describe('calculator', () => {
-    it('should return "Hello, world!"', () => {
-        expect(calculator()).toBe('Hello, world!');
+    it('should return 3', () => {
+        expect(calculator('1,2')).toBe(3);
     });
 });
