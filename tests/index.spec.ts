@@ -12,6 +12,14 @@ describe('add', () => {
     it('should return sum of n numbers', () => {
         expect(add('1,2,3,4,5,6,7,8,9,10')).toBe(55);
     });
+
+    it('should return 6', () => {
+        expect(add('1\n2,3')).toBe(6);
+    });
+
+    it('should return 3', () => {
+        expect(add('//;\n1;2')).toBe(3);
+    });
 });
 
 describe('calculateSum', () => {
