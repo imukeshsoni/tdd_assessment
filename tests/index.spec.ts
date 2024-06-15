@@ -38,12 +38,12 @@ describe('calculateSum', () => {
 
 describe('splitNumbers', () => {
     it('should return an array of numbers', () => {
-        expect(splitNumbers('1,2,3,4,5,6,7,8,9,10', ',')).toEqual([
+        expect(splitNumbers('1,2,3,4,5,6,7,8,9,10')).toEqual([
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
         ]);
     });
 
     it('should return empty array', () => {
-        expect(() => splitNumbers('', '')).toBeTruthy();
+        expect(() => splitNumbers('')).toBeTruthy();
     });
 });
