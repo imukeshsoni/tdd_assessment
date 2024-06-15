@@ -1,4 +1,4 @@
-import add, { calculateSum } from '../src/index';
+import add, { calculateSum, splitNumbers } from '../src/index';
 
 describe('add', () => {
     it('should return 0', () => {
@@ -25,5 +25,17 @@ describe('calculateSum', () => {
 
     it('should return sum of n numbers', () => {
         expect(calculateSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toBe(55);
+    });
+});
+
+describe('splitNumbers', () => {
+    it('should return an array of numbers', () => {
+        expect(splitNumbers('1,2,3,4,5,6,7,8,9,10', ',')).toEqual([
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        ]);
+    });
+
+    it('should return empty array', () => {
+        expect(() => splitNumbers('', '')).toBeTruthy();
     });
 });

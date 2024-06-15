@@ -7,3 +7,8 @@ export default function add(nums: string): number {
 export function calculateSum(numbers: number[]): number {
     return numbers.reduce((acc, curr) => acc + curr, 0);
 }
+
+export function splitNumbers(nums: string, delimeter: string): number[] {
+    if(!nums) return [];
+    return nums.split(delimeter).map(Number);
+}
