@@ -1,6 +1,6 @@
 export default function add(nums: string): number {
     if (!nums) return 0;
-    const numbers = nums.split(',').map(Number);
+    const numbers = splitNumbers(nums);
     return calculateSum(numbers);
 }
 
@@ -8,7 +8,15 @@ export function calculateSum(numbers: number[]): number {
     return numbers.reduce((acc, curr) => acc + curr, 0);
 }
 
-export function splitNumbers(nums: string, delimeter: string): number[] {
-    if(!nums) return [];
-    return nums.split(delimeter).map(Number);
+export function splitNumbers(nums: string): number[] {
+    let delimiter = /,|\n/; // taking default delimiters as comma and newline
+    let numbers = nums;
+
+    if (nums.startsWith('//')) {
+        const delimiterEndIndex = nums.indexOf('\n');
+        delimiter = new RegExp(nums.substring(2, delimiterEndIndex));
+        numbers = nums.substring(delimiterEndIndex + 1);
+    }
+
+    return numbers.split(delimiter).map(Number);
 }
